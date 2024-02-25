@@ -1,5 +1,5 @@
-import 'package:doctor_channeling_app/view/messages_screen/doctors_conversation_view.dart';
 import 'package:doctor_channeling_app/view/messages_screen/messages_screen.dart';
+import 'package:doctor_channeling_app/view/notification_screen/notification_Screen.dart';
 import 'package:flutter/material.dart';
 
 class DefaultScreen extends StatefulWidget {
@@ -11,12 +11,19 @@ class DefaultScreen extends StatefulWidget {
 
 class _DefaultScreenState extends State<DefaultScreen> {
   int navigationIndex = 0;
+  List bottomNavigationList = [
+    const MessagesScreen(),
+    const NotificationScreen(),
+    const MessagesScreen(),
+    const MessagesScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: const Icon(Icons.arrow_back_ios_new),
+        forceMaterialTransparency: true,
       ),
       bottomNavigationBar: SizedBox(
         // height: 83,
@@ -97,7 +104,10 @@ class _DefaultScreenState extends State<DefaultScreen> {
             ]),
       ),
       // body: const MessagesScreen(),
-      body: const MessagesScreen(),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: bottomNavigationList.elementAt(navigationIndex),
+      ),
     );
   }
 }
