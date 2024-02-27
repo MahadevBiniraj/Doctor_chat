@@ -1,5 +1,6 @@
 import 'package:doctor_channeling_app/view/messages_screen/messages_screen.dart';
 import 'package:doctor_channeling_app/view/notification_screen/notification_Screen.dart';
+import 'package:doctor_channeling_app/view/profile_screen/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class DefaultScreen extends StatefulWidget {
@@ -12,10 +13,10 @@ class DefaultScreen extends StatefulWidget {
 class _DefaultScreenState extends State<DefaultScreen> {
   int navigationIndex = 0;
   List bottomNavigationList = [
-    {"screen": const MessagesScreen(), "screenName": "Messages"},
+    {"screen": const MessagesScreen(), "screenName": "Home"},
     {"screen": const NotificationScreen(), "screenName": "Notifications"},
-    {"screen": const MessagesScreen(), "screenName": "Messages"},
-    {"screen": const MessagesScreen(), "screenName": "Messages"},
+    {"screen": const MessagesScreen(), "screenName": "Message"},
+    {"screen": const ProfileScreen(), "screenName": "Profile"},
   ];
 
   @override
@@ -23,7 +24,7 @@ class _DefaultScreenState extends State<DefaultScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: const Icon(Icons.arrow_back_ios_new),
-        title: Text("Notification"),
+        title: Text(bottomNavigationList[navigationIndex]["screenName"]),
         centerTitle: true,
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
@@ -111,7 +112,7 @@ class _DefaultScreenState extends State<DefaultScreen> {
       // body: const MessagesScreen(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
-        child: bottomNavigationList[navigationIndex],
+        child: bottomNavigationList[navigationIndex]["screen"],
       ),
     );
   }
