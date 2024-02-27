@@ -1,6 +1,4 @@
 import 'package:doctor_channeling_app/view/default_screen/default_screen.dart';
-import 'package:doctor_channeling_app/view/messages_screen/doctors_conversation_view.dart';
-
 import 'package:flutter/material.dart';
 
 void main() {

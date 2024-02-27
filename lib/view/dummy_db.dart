@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class DummyDb {
   static List conversation = [
     {"message": "Rorem ipsum dolor sit  adipiscing elit.", "doctor": false},
@@ -28,5 +30,15 @@ class DummyDb {
     {
       "doctor": "Dr. Rayan",
     },
+  ];
+
+  static List profileOptions = [
+    {"icon": Icons.history, "option": "History"},
+    {"icon": Icons.account_circle, "option": "Personal Detailes"},
+    {"icon": Icons.location_on, "option": "Location"},
+    {"icon": Icons.payments, "option": "Payment Method"},
+    {"icon": Icons.settings, "option": "Settings"},
+    {"icon": Icons.help, "option": "Help"},
+    {"icon": Icons.logout, "option": "Logout"},
   ];
 }
