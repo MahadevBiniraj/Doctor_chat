@@ -1,6 +1,5 @@
 import 'package:doctor_channeling_app/view/messages_screen/messages_screen.dart';
-import 'package:doctor_channeling_app/view/notification_screen/notification_Screen.dart';
-import 'package:doctor_channeling_app/view/profile_screen/profile_screen.dart';
+
 import 'package:flutter/material.dart';
 
 class DefaultScreen extends StatefulWidget {
@@ -14,9 +13,9 @@ class _DefaultScreenState extends State<DefaultScreen> {
   int navigationIndex = 0;
   List bottomNavigationList = [
     {"screen": const MessagesScreen(), "screenName": "Home"},
-    {"screen": const NotificationScreen(), "screenName": "Notifications"},
+    {"screen": const MessagesScreen(), "screenName": "Notifications"},
     {"screen": const MessagesScreen(), "screenName": "Message"},
-    {"screen": const ProfileScreen(), "screenName": "Profile"},
+    {"screen": const MessagesScreen(), "screenName": "Profile"},
   ];
 
   @override

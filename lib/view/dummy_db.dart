@@ -20,15 +20,23 @@ class DummyDb {
   static List doctorsList = [
     {
       "doctor": "Dr. Upul",
+      "profilepic":
+          "https://t3.ftcdn.net/jpg/02/60/04/08/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg"
     },
     {
-      "doctor": "Dr. Silva",
+      "doctor": "Dr. Saravan",
+      "profilepic":
+          "https://t3.ftcdn.net/jpg/02/60/04/08/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg"
     },
     {
-      "doctor": "Dr. Pawani",
+      "doctor": "Dr. muhammed",
+      "profilepic":
+          "https://t3.ftcdn.net/jpg/02/60/04/08/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg"
     },
     {
-      "doctor": "Dr. Rayan",
+      "doctor": "Dr. mahadev",
+      "profilepic":
+          "https://t3.ftcdn.net/jpg/02/60/04/08/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg"
     },
   ];
 
